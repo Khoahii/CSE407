@@ -1,12 +1,13 @@
+// NhanVienBanThoiGian.java
 public class NhanVienBanThoiGian extends NhanVien {
-	private static final double DON_GIA = 30000;
+	private static final int LUONG_GIO = 30_000;
 
 	public NhanVienBanThoiGian(String ten, int soGioLam) {
 		super(ten, soGioLam);
 	}
 
 	@Override
-	public double TinhLuong() {
-		return getSoGioLam() * DON_GIA;
+	public long tinhLuong() {
+		return soGioLam * (long) LUONG_GIO;
 	}
 }
