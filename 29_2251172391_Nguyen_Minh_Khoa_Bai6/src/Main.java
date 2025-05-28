@@ -13,7 +13,7 @@ public class Main {
 		hearAnimal(catAnimal);
 	}
 
-	// Client method
+	// Client method 
 	public static void hearAnimal(Animal animal) {
 		animal.makeSound();
 	}
