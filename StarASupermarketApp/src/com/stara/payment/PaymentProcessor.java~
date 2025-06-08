@@ -1,0 +1,4 @@
+package com.stara.payment;
+
+public interface PaymentProcessor {
+}

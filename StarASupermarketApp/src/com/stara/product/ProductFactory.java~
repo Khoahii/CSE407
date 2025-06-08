@@ -1,0 +1,4 @@
+package com.stara.product;
+
+public interface ProductFactory {
+}
