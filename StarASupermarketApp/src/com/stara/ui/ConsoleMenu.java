@@ -11,7 +11,7 @@ public class ConsoleMenu {
 	public static void displayMainMenu() {
 		System.out.println("\n--- HỆ THỐNG QUẢN LÝ SIÊU THỊ STARA ---");
 		System.out.println("1. Quản lý Sản phẩm");
-		System.out.println("2. Xử lý Đơn hàng mới");
+		System.out.println("2. Quản lý đơn hàng");
 		System.out.println("3. Xử lý Thanh toán");
 		System.out.println("4. Xem Báo cáo");
 		System.out.println("0. Thoát ứng dụng");
@@ -25,7 +25,21 @@ public class ConsoleMenu {
 		System.out.println("\n--- QUẢN LÝ SẢN PHẨM ---");
 		System.out.println("1. Thêm Sản phẩm mới");
 		System.out.println("2. Hiển thị tất cả Sản phẩm");
-		// Có thể thêm: 3. Cập nhật Sản phẩm, 4. Xóa Sản phẩm
+		System.out.println("3. Xóa Sản phẩm theo ID"); // Thêm chức năng xóa
+		System.out.println("4. Tìm kiếm Sản phẩm theo tên"); // Thêm chức năng tìm kiếm
+		System.out.println("0. Quay lại Menu chính");
+		System.out.print("Vui lòng chọn chức năng: ");
+	}
+
+	/**
+	 * Hiển thị menu quản lý đơn hàng.
+	 */
+	public static void displayOrderManagementMenu() {
+		System.out.println("\n--- QUẢN LÝ ĐƠN HÀNG ---");
+		System.out.println("1. Tạo Đơn hàng mới");
+		System.out.println("2. Hiển thị tất cả Đơn hàng");
+		System.out.println("3. Xóa Đơn hàng theo ID");
+		System.out.println("4. Tìm kiếm Đơn hàng theo tên khách hàng");
 		System.out.println("0. Quay lại Menu chính");
 		System.out.print("Vui lòng chọn chức năng: ");
 	}
@@ -54,6 +68,7 @@ public class ConsoleMenu {
 
 	/**
 	 * Lấy lựa chọn số nguyên từ người dùng.
+	 *
 	 * @param scanner Đối tượng Scanner để đọc đầu vào.
 	 * @return Lựa chọn của người dùng.
 	 */
