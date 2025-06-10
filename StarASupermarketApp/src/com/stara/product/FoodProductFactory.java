@@ -9,4 +9,9 @@ public class FoodProductFactory implements ProductFactory {
 		}
 		throw new IllegalArgumentException("Ngày hết hạn là bắt buộc cho FoodProduct.");
 	}
+
+	@Override
+	public String confirAddProduct(String name){
+		return "Sản phẩm " + '"' + name + '"' + " đã được thêm.";
+	}
 }

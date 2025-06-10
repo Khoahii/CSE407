@@ -1,10 +1,6 @@
 package com.stara.main;
 
-import com.stara.product.Product;
-import com.stara.product.ProductDataManager;
-import com.stara.product.FoodProductFactory;
-import com.stara.product.ElectronicsProductFactory;
-
+import com.stara.product.*;
 import com.stara.order.Order;
 import com.stara.order.OrderItem;
 
@@ -117,9 +113,18 @@ public class Main {
 						System.out.println("Loại sản phẩm không hợp lệ.");
 					}
 
+					String confirm = null;
+					ProductFactory productFactory = null;
 					if (newProduct != null) {
 						productList.add(newProduct);
-						System.out.println("Đã thêm sản phẩm thành công!");
+						if (newProduct instanceof FoodProduct) {
+							productFactory = new FoodProductFactory();
+							confirm = productFactory.confirAddProduct(newProduct.getName());
+						} else {
+							productFactory = new ElectronicsProductFactory();
+							confirm = productFactory.confirAddProduct(newProduct.getName());
+						}
+						System.out.println(confirm);
 					}
 					break;
 				case 2: // Hiển thị sản phẩm

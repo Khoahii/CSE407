@@ -9,4 +9,9 @@ public class ElectronicsProductFactory implements ProductFactory {
 		}
 		throw new IllegalArgumentException("Thời gian bảo hành là bắt buộc cho ElectronicsProduct.");
 	}
+
+	@Override
+	public String confirAddProduct(String name){
+		return "Sản phẩm " + '"' + name + '"' + " đã được thêm.";
+	}
 }
