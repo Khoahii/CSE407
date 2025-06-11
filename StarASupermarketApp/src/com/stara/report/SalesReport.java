@@ -1,7 +1,7 @@
 package com.stara.report;
 
 import com.stara.order.Order;
-import com.stara.order.OrderItem; // Import OrderItem để truy cập chi tiết sản phẩm trong đơn hàng
+import com.stara.order.ConcreteOrderBuilder; // Import OrderItem để truy cập chi tiết sản phẩm trong đơn hàng
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
@@ -43,14 +43,14 @@ public class SalesReport extends Report {
 				data.add("  ----------------------------------------------------"); // Điều chỉnh độ dài gạch ngang
 
 				double orderSubtotal = 0;
-				for (OrderItem item : order.getItems()) {
-					data.add(String.format("  %-5d %-25s %,-12.0f %,-12.0f", // Đã thêm 12 vào %,-.0f
-									item.getQuantity(),
-									item.getProduct().getName(),
-									item.getProduct().getPrice(),
-									item.getTotalPrice()));
-					orderSubtotal += item.getTotalPrice();
-				}
+//				for (ConcreteOrderBuilder item : order.getItems()) {
+//					data.add(String.format("  %-5d %-25s %,-12.0f %,-12.0f", // Đã thêm 12 vào %,-.0f
+//									item.getQuantity(),
+//									item.getProduct().getName(),
+//									item.getProduct().getPrice(),
+//									item.getTotalPrice()));
+//					orderSubtotal += item.getTotalPrice();
+//				}
 				data.add("  ----------------------------------------------------"); // Điều chỉnh độ dài gạch ngang
 				data.add(String.format("  Tổng phụ: %,-12.0f VNĐ", orderSubtotal)); // Đã thêm 12
 				if (order.getDiscount() > 0) {
