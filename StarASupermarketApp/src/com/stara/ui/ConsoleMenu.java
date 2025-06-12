@@ -25,8 +25,8 @@ public class ConsoleMenu {
 		System.out.println("\n--- QUẢN LÝ SẢN PHẨM ---");
 		System.out.println("1. Thêm Sản phẩm mới");
 		System.out.println("2. Hiển thị tất cả Sản phẩm");
-		System.out.println("3. Xóa Sản phẩm theo ID"); // Thêm chức năng xóa
-		System.out.println("4. Tìm kiếm Sản phẩm theo tên"); // Thêm chức năng tìm kiếm
+		System.out.println("3. Xóa Sản phẩm theo ID");
+		System.out.println("4. Tìm kiếm Sản phẩm theo tên");
 		System.out.println("0. Quay lại Menu chính");
 		System.out.print("Vui lòng chọn chức năng: ");
 	}
@@ -40,6 +40,7 @@ public class ConsoleMenu {
 		System.out.println("2. Hiển thị tất cả Đơn hàng");
 		System.out.println("3. Xóa Đơn hàng theo ID");
 		System.out.println("4. Tìm kiếm Đơn hàng theo tên khách hàng");
+		System.out.println("5. Quản lý vận chuyển"); // Tùy chọn mới
 		System.out.println("0. Quay lại Menu chính");
 		System.out.print("Vui lòng chọn chức năng: ");
 	}
@@ -65,6 +66,18 @@ public class ConsoleMenu {
 		System.out.println("0. Quay lại Menu chính");
 		System.out.print("Vui lòng chọn loại báo cáo: ");
 	}
+
+	/**
+	 * Hiển thị menu quản lý vận chuyển.
+	 */
+	public static void displayDeliveryManagementMenu() {
+		System.out.println("\n--- QUẢN LÝ VẬN CHUYỂN ---");
+		System.out.println("1. Giao hàng tiêu chuẩn");
+		System.out.println("2. Giao hàng nhanh");
+		System.out.println("0. Quay lại Menu Quản lý Đơn hàng");
+		System.out.print("Vui lòng chọn chức năng vận chuyển: ");
+	}
+
 
 	/**
 	 * Lấy lựa chọn số nguyên từ người dùng.
